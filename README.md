@@ -1,0 +1,2 @@
+# uwsgitest
+django uwsgi config
