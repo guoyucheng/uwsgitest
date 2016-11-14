@@ -54,7 +54,6 @@ function update() {
 
 function do_stop() {
 	if [ "$STATUS" = "running" ]; then
-		kill `ps -ef|grep $OLD_DIR/logstash |grep -v 'grep'|awk '{print $2}'`
 		uwsgi --stop uwsgi.pid
 		wait_stop
 	fi
@@ -63,7 +62,6 @@ function do_stop() {
 function do_start() {
 	if [ "$STATUS" = "stoped" ]; then
 		uwsgi --ini uwsgi.ini
-		logstash -f $OLD_DIR/logstash.conf > /dev/null 2>&1 &
 	fi
 }
 
