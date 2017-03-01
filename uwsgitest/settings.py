@@ -46,6 +46,8 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'core.middleware.Test3',
+    'core.middleware.Test4'
 )
 
 ROOT_URLCONF = 'uwsgitest.urls'
